@@ -13017,6 +13017,45 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13050,7 +13089,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13077,7 +13116,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&lt; <a href="https://tdm.universiteitleiden.nl/Python/Data%20acquisition.html">Data acquisition</a> | <a href="https://tdm.universiteitleiden.nl/Python">Table of contents</a> | <a href="https://tdm.universiteitleiden.nl/Python/Pandas.html">Data analysis with Pandas</a> &gt;</p>
+<p>&lt; <a href="Data%20acquisition.html">Data acquisition</a> | <a href="https://tdm.universiteitleiden.nl/Python">Table of contents</a> | <a href="Pandas.html">Data analysis with Pandas</a> &gt;</p>
 
 </div>
 </div>
@@ -13118,7 +13157,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
-<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="k">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
 </pre></div>
 
     </div>
@@ -13140,7 +13179,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
-<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="k">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
 
 <span class="n">quote</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">In the late summer of that year we lived in a house in a village that looked across the river and the plain to the mountains. In the bed of the river there were pebbles and boulders, dry and white in the sun, and the water was clear and swiftly moving and blue in the channels. Troops went by the house and down the road and the dust they raised powdered the leaves of the trees. The trunks of the trees too were dusty and the leaves fell early that year and we saw the troops marching along the road and the dust rising and leaves, stirred by the breeze, falling and the soldiers marching and afterward the road bare and white except for the leaves.</span>
@@ -13178,11 +13217,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
-<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="k">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
 
 <span class="n">quote</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">The studio was filled with the rich odour of roses, and when the light summer wind stirred amidst the trees of the garden, there came through the open door the heavy scent of the lilac, or the more delicate perfume of the pink-flowering thorn.</span>
@@ -13197,71 +13236,6 @@ div#notebook {
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The =&gt; DT
-studio =&gt; NN
-was =&gt; VBD
-filled =&gt; VBN
-with =&gt; IN
-the =&gt; DT
-rich =&gt; JJ
-odour =&gt; NN
-of =&gt; IN
-roses =&gt; NNS
-, =&gt; ,
-and =&gt; CC
-when =&gt; WRB
-the =&gt; DT
-light =&gt; JJ
-summer =&gt; NN
-wind =&gt; NN
-stirred =&gt; VBD
-amidst =&gt; IN
-the =&gt; DT
-trees =&gt; NNS
-of =&gt; IN
-the =&gt; DT
-garden =&gt; NN
-, =&gt; ,
-there =&gt; EX
-came =&gt; VBD
-through =&gt; IN
-the =&gt; DT
-open =&gt; JJ
-door =&gt; NN
-the =&gt; DT
-heavy =&gt; JJ
-scent =&gt; NN
-of =&gt; IN
-the =&gt; DT
-lilac =&gt; NN
-, =&gt; ,
-or =&gt; CC
-the =&gt; DT
-more =&gt; JJR
-delicate =&gt; JJ
-perfume =&gt; NN
-of =&gt; IN
-the =&gt; DT
-pink-flowering =&gt; JJ
-thorn =&gt; NN
-. =&gt; .
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13302,7 +13276,7 @@ thorn =&gt; NN
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
-<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">WordNetLemmatizer</span>
+<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="k">import</span> <span class="n">WordNetLemmatizer</span>
 <span class="kn">import</span> <span class="nn">dtdpTdm</span> <span class="k">as</span> <span class="nn">dtdp</span>
 <span class="kn">import</span> <span class="nn">re</span>
 
@@ -13335,7 +13309,7 @@ thorn =&gt; NN
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&lt; <a href="https://tdm.universiteitleiden.nl/Python/Data%20acquisition.html">Data acquisition</a> | <a href="https://tdm.universiteitleiden.nl/Python">Table of contents</a> | <a href="https://tdm.universiteitleiden.nl/Python/Pandas.html">Data analysis with Pandas</a> &gt;</p>
+<p>&lt; <a href="Data%20acquisition.html">Data acquisition</a> | <a href="https://tdm.universiteitleiden.nl/Python">Table of contents</a> | <a href="Pandas.html">Data analysis with Pandas</a> &gt;</p>
 
 </div>
 </div>
