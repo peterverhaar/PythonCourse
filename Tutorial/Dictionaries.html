@@ -13017,6 +13017,45 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13050,7 +13089,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13077,8 +13116,16 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>&lt; <a href="Lists.html">Lists</a> | <a href="https://tdm.universiteitleiden.nl/Python/">Table of contents</a> | <a href="Working%20with%20files%20and%20folders.html">Working with files and folders</a> &gt;</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h1><p>Like a list, a dictionary is a data structure which can be used to collect multiple values. While the indices of lists consist of numbers which are assigned automatically, the indices of dictionaries can be of any value type, and programmers also need to define these indices themselves.</p>
-<p>A dictionary can be created using the <code>dict()</code> function. This function results in an empty dictionary. Elements can be added to the dictionary by using the bracket operator containing the index. Importantly, each of these indices must be unique. The value associated with this index needs to be given after the assignment operator.</p>
+<p>A dictionary can be created using the dict() function. This function results in an empty dictionary. Elements can be added to the dictionary by using the bracket operator containing the index. Importantly, each of these indices must be unique. The value associated with this index needs to be given after the assignment operator.</p>
 
 </div>
 </div>
@@ -13106,7 +13153,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As can be seen in the code above, the individual values in dictionaries can be accessed by using their indices. When you mention an index that does not actually exist, however, the code produces an error. It is evidently impossible to make use of an index which does not exist. To avoid such error messages, you can make use of the <code>get()</code> method. This method requires two values. Firstly, you need to mention the index of the element that you want to retrieve. Secondly, you have to provide a default value which should be returned when the index that was supplied does not exist.</p>
+<p>As can be seen in the code above, the individual values in dictionaries can be accessed by using their indices. When you mention an index that does not actually exist, however, the code produces an error. It is evidently impossible to make use of an index which does not exist. To avoid such error messages, you can make use of the get() method. This method requires two values. Firstly, you need to mention the index of the element that you want to retrieve. Secondly, you have to provide a default value which should be returned when the index that was supplied does not exist.</p>
 
 </div>
 </div>
@@ -13117,10 +13164,10 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span> <span class="s1">&#39;yearOfBirth&#39;</span> <span class="p">,</span> <span class="s1">&#39;NULL&#39;</span> <span class="p">)</span> <span class="p">)</span>
-<span class="c1"># prints &#39;NULL&#39; if the variable data[&#39;yearOfBirth&#39;] has not been set yet.</span>
+<span class="c1"># prints &#39;NULL&#39; is the variable data[&#39;yearOfBirth&#39;] has not been set yet.</span>
 
 <span class="nb">print</span><span class="p">(</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span> <span class="s1">&#39;numberOfChildren&#39;</span> <span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">)</span>
-<span class="c1"># prints 0 if the variable data[&#39;numberOfChildren&#39;] has not been set yet.</span>
+<span class="c1"># prints 0 is the variable data[&#39;numberOfChildren&#39;] has not been set yet.</span>
 </pre></div>
 
     </div>
@@ -13160,7 +13207,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As is the case for lists, you can iterate all the elements in a dictionary via the <code>for</code> keyword.</p>
+<p>As is the case for lists, you can iterate all the elements in a dictionary via the ‘for’ keyword.</p>
 
 </div>
 </div>
@@ -13183,7 +13230,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Sorting-a-dictionary">Sorting a dictionary<a class="anchor-link" href="#Sorting-a-dictionary">&#182;</a></h2><p>By default, all the items in this dictionary are shown in the order in which they were added to the dictionary.</p>
-<p>When you have created a dictionary named 'capitals', using the code above, it can be sorted by index using the in-built <code>sorted()</code> function.</p>
+<p>When you have created a dictionary named 'capitals', using the code above, it can be sorted by index using the in-built sorted() function. Strings are sorted alphabetically and integers and floats are sorted numerically.</p>
 
 </div>
 </div>
@@ -13205,8 +13252,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sorting by value is slightly more complicated. One of the most convenient ways is by making use of a small new function which can firstly sort the values of dictionaries, and which then return the associated keys. The ‘capitals’ dictionary that was used in examples above can be sorted by value by making use of the code below.</p>
-<p>The code as it is given in the <code>getSortedKeys()</code> function sorts the keys in an ascending order. To work with a descending order, you can use the output of the <code>getSortedKeys()</code> function in the in-build <code>reversed()</code> function, as shown below. The first iteration produces a list which starts with Amsterdam, and which ends in Rome. The second iteration shows the same list, but in the inverse order.</p>
+<p>Note that the code above sorts the dictionary by index. In this example, the sorting opertaion is based on the names of the countries. Sorting by value is slightly more complicated. Python does not contain an in-built function for sorting dictionaries by value, unfortunately. One solution is to create a new function which does offer this functionality. The cell below provides the code that can be used for this purpose.</p>
+<p>The code as it is given in the 'sortedByValue()' function sorts the keys in an ascending order. To work with a descending order, you can use the output of the sortedByValue() function in the in-build reversed() function, as shown below. The first iteration produces a list which starts with Amsterdam, and which ends in Rome. The second iteration shows the same list, but in the inverse order.</p>
 
 </div>
 </div>
@@ -13216,16 +13263,16 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getSortedKeys</span><span class="p">(</span> <span class="nb">dict</span> <span class="p">):</span>      
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sortedByValue</span><span class="p">(</span> <span class="nb">dict</span> <span class="p">):</span>      
     <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span> <span class="nb">dict</span> <span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">x</span><span class="p">])</span> 
     
 
-<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">getSortedKeys</span><span class="p">(</span><span class="n">capitals</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">sortedByValue</span><span class="p">(</span><span class="n">capitals</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span> <span class="n">capitals</span><span class="p">[</span><span class="n">country</span><span class="p">])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
     
-<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">getSortedKeys</span><span class="p">(</span><span class="n">capitals</span><span class="p">)):</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">sortedByValue</span><span class="p">(</span><span class="n">capitals</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span> <span class="n">capitals</span><span class="p">[</span><span class="n">country</span><span class="p">]</span> <span class="p">)</span>
 </pre></div>
 
@@ -13233,6 +13280,14 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&lt; <a href="Lists.html">Lists</a> | <a href="https://tdm.universiteitleiden.nl/Python/">Table of contents</a> | <a href="Working%20with%20files%20and%20folders.html">Working with files and folders</a> &gt;</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
